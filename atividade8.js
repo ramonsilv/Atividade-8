@@ -47,7 +47,3 @@ chave = Array.from(mapaSala.keys())
 quartaElemento = chave[3]
 mapaSala.delete(quartoElemento)
 console.log(mapaSala)
-
-
-
-
