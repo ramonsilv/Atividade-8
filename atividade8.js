@@ -39,11 +39,64 @@ for (i = 0; i < alunos.length; i++) {
 
 }
 
-// console.log(mapaSala)
+// console.log(mapaSala)    //(EXERCICIO 4)
 
-// console.log(mapaSala.get("Pepe").nota);(EXERCICIO 5)
+// console.log('A Nota do 5º aluno- Pepe é: ', mapaSala.get("Pepe").nota) //(EXERCICIO 5)
 
-chave = Array.from(mapaSala.keys())
-quartaElemento = chave[3]
-mapaSala.delete(quartoElemento)
+mapaSala.delete('Woshinton')
+// console.log(mapaSala)   //(EXERCICIO 6)
+const valorRemovido = mapaSala.delete('Woshinton')
+// console.log("O Aluno Woshinton foi removido: ", valorRemovido)   //(EXERCICIO 6)
+
+jhonAluno = mapaSala.has('Jhon snow')
+// console.log("Existe algum aluno chamado Jhon Snow: " +jhonAluno)//(EXERCICIO 7)
+
+chaves = ""
+for (const x of mapaSala.keys()) {
+    chaves += x
+    if (x !== [...mapaSala.keys()][mapaSala.size - 1]) {
+        chaves += ", "
+    }
+}
+// console.log('A chaves do Mapa são: ', chaves)    //(EXERCICIO 8)
+
+// valores = Array.from(mapaSala.values())  //MODO 1(EXERCICIO 9)
+// console.log('Os valores das chaves são: ', valores)  //MODO 1(EXERCICIO 9)
+
+// valores = ""
+// for (const value of mapaSala.values()) {
+//     valores += value.alunos
+//     if (value !== [...mapaSala.values()][mapaSala.size - 1]) {
+//         valores += ", "
+//     }
+// }
+// console.log('Os valores das chaves são: ', valores)      //MODO 2(EXERCICIO 9)
+
+// for (const [chave, valor] of mapaSala) {
+//     console.log(`Chave: ${chave}`)
+//     console.log(`Alunos: ${valor.alunos}`)
+//     console.log(`Nota: ${valor.nota}`)
+//     console.log(`Situação: ${valor.situação}`)
+//     console.log('---------------------------')
+// }                                               //MODO 3(EXERCICIO 9)
+
+// valores = ''
+// for (const value of mapaSala.values()) {
+//     valores += JSON.stringify(value) + ", "
+// }
+// valores = valores.slice(0, -2)
+//
+// console.log('Os valores das chaves são:', valores)      //MODO 4(EXERCICIO 9)
+
+entradas = Array.from(mapaSala.entries())
+// console.log("A entrada do Mapa da sala é: ", entradas)  //MODO 1(EXERCICIO 10)
+
+// for (const [chave, valor] of mapaSala.entries()) {
+//     console.log(`Chave: ${chave}`)
+//     console.log(`Alunos: ${valor.alunos}`)
+//     console.log(`Nota: ${valor.nota}`)
+//     console.log(`Situação: ${valor.situação}`)
+//     console.log('---------------------------')
+// }                                                //MODO 2 (EXERCICIO 10)
+
 console.log(mapaSala)
